@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>To do list</title>
+  </head>
+  <body>
+    <h1>To do list<h1>
+      <form>
+        <input type="text" name="addHere" placeholder="Add to do here" value="">
+        <input type="submit" name="add" value="ADD">
+      </form>
+      <form>
+        <ul>
+          <li><input type="submit" name="completed" value="Mark as complete"> <label "wash car"></label></li>
+          <li><input type="submit" name="completed" value="Mark as complete"> <label for="wash car"></label></li>
+          <li><input type="submit" name="completed" value="Mark as complete"> <label for="wash car"></label></li>
+          <li><input type="submit" name="completed" value="Mark as complete"> <label for="wash car"></label></li>
+       </ul>
+    </form>
+         <h1>Completed tasks<h1>
+      <p class = "completed" >
+  </body>
+</html>
