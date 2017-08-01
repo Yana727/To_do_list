@@ -1,9 +1,13 @@
 {
   "private": true,
+  "scripts": {
+    "start": "nodemon -e js,mst -w . -w views  app.js"
+  },
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "express-validator": "^3.2.1",
+    "jsonfile": "^3.0.1",
     "mustache-express": "^1.2.5"
   }
 }

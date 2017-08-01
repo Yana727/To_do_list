@@ -6,19 +6,24 @@
   </head>
   <body>
     <h1>To do list<h1>
-      <form>
+      <form method="POST" action ="/" > 
         <input type="text" name="addHere" placeholder="Add to do here" value="">
-        <input type="submit" name="add" value="ADD">
+
+        <input type="submit" name="submit" value="ADD">
       </form>
-      <form>
-        <ul>
-          <li><input type="submit" name="completed" value="Mark as complete"> <label "wash car"></label></li>
-          <li><input type="submit" name="completed" value="Mark as complete"> <label for="wash car"></label></li>
-          <li><input type="submit" name="completed" value="Mark as complete"> <label for="wash car"></label></li>
-          <li><input type="submit" name="completed" value="Mark as complete"> <label for="wash car"></label></li>
+
+        {{#todos}}
+        <ul> <!-- the value ={{.}}, because it's users imput. the "name is {{.}}, bc it will add the text to the button" -->
+          <li>
+            <form action="/completed" method="POST">
+            <button type="submit" name="done" value="{{.}}">mark as done</button>{{.}}
+          </form>
+        </li>
        </ul>
-    </form>
+       {{/todos}}
          <h1>Completed tasks<h1>
-      <p class = "completed" >
+          {{#done}}
+              <ul>{{.}}</ul>
+          {{/done}}
   </body>
 </html>
